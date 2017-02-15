@@ -14,10 +14,6 @@ $(document).ready(function(){
     var food;
     var score;
     var snake_array;
-var j=[{x:4,y:4},{x:5,y:4},{x:4,y:5},{x:4,y:6},{x:5,y:6},
-        {x:7,y:4},{x:7,y:5},{x:7,y:6},{x:8,y:6},{x:9,y:6},{x:9,y:5},{x:9,y:4},
-        {x:11,y:4},{x:12,y:4},{x:11,y:5},{x:11,y:6},{x:12,y:6},
-        {x:14,y:4},{x:14,y:5},{x:14,y:6},{x:16,y:4},{x:15,y:5},{x:16,y:6}]// Multiplayer sync
 
     function init()
     {
@@ -53,12 +49,6 @@ var j=[{x:4,y:4},{x:5,y:4},{x:4,y:5},{x:4,y:6},{x:5,y:6},
     function paint()
     {
         ctx.fillStyle = "white";
-        ctx.fillRect(0, 0, w, h);
-        ctx.strokeStyle = "black";
-        ctx.strokeRect(0, 0, w, h);
-
-	// multiplayer
-	ctx.fillStyle = "white";
         ctx.fillRect(0, 0, w, h);
         ctx.strokeStyle = "black";
         ctx.strokeRect(0, 0, w, h);
@@ -101,10 +91,6 @@ var j=[{x:4,y:4},{x:5,y:4},{x:4,y:5},{x:4,y:6},{x:5,y:6},
         {
             var c = snake_array[i];
             paint_cell(c.x, c.y);
-        }
-for(var i=-1;++i<j.length;)
-        {
-            paint_cell(j[i].x,j[i].y); // Second player
         }
 
         paint_cell(food.x, food.y);
